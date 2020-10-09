@@ -1,0 +1,117 @@
+body{
+  //background-image: url("src\assets\pexels-photo-633409.jpeg");
+ 
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1024px;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.chatbox{
+  height:100vh;
+  width:100%;
+  
+  margin-top: 58px;
+}
+
+.chatroom-name{
+  font-weight:400;
+
+}
+
+.chatroom-last-content{
+  font-size: 12px;
+  line-height: 15px;;
+}
+
+.received-message{
+  margin-top: 15px;
+  background-color:rgb(177, 243, 177);
+  display:inline-block;
+  border-radius: 20px;
+  padding:10px 15px;
+
+}
+
+.time{
+  font-size:13px;
+  color:grey;
+  margin-top:3px;
+  margin-left:1px;
+
+}
+
+.sent-message{
+  background-color:rgb(209, 250, 250);
+  display:inline-block;
+  border-radius: 20px;
+  padding:10px 15px;
+
+}
+
+#chat-body{
+  overflow-y:scroll;
+  overflow-x: hidden;
+  
+}
+
+#contacts-body{
+  overflow-y:scroll;
+  overflow-x: hidden;
+
+}
+
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop .fade .in {
+  opacity: 0.5 !important;
+}
+
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+
+
+body.modal-open div.modal-backdrop { 
+  z-index: 0; 
+}
+.header{
+  z-index: 6;
+  position:fixed;
+  top: 0;
+  width: 100%;
+ background-color: black;
+  height:60px;
+  .container{
+
+  z-index: 1;
+    width:40%;
+    display:inline-flex;
+    .p-3{
+
+  color: black;
+      margin:0px;
+    }
+  }
+}
+
+button{
+  background-color: #57CCC0;
+  color: black;
+}

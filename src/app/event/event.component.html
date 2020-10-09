@@ -1,0 +1,225 @@
+<div class="mainl">
+<div class="container-fluid header w-100 " style="height:8%; font-size:16px;font-weight:500;">
+  <div class="container   justify-content-between float-right ">
+    <div class="p-3  "><a [routerLink]="['/home']" style="color: white;">Home</a></div>
+    <div class="p-3 "><a [routerLink]="['/event']" style="color: white;">Events</a></div>
+    <div class="p-3  "><a [routerLink]="['/chat']" style="color: white;">ChatRoom</a></div>
+    <div class="p-3    "><a [routerLink]="['/photography']" style="color: white;">Gallery</a></div>
+    <div class="p-3  "><a [routerLink]="['/login']" style="color: white;">Loguot</a></div>
+
+  </div>
+</div>
+<div class="main">
+  <div class="topnav">
+    <span (click)="setConfig('all')"> Show All</span>
+    <span (click)="setConfig('Music')"> Music</span>
+    <span (click)="setConfig('Arts')"> Arts</span>
+    <span (click)="setConfig('Philosophy')"> Philosophy</span>
+    <div class="search-container">
+      <form [formGroup]="searchForm" (ngSubmit)="searchEvent()">
+        <fieldset [disabled]="isSubmitting" class="form">
+          <fieldset>
+            <input
+              type="keyword"
+              placeholder=" Enter keyword"
+              formControlName="keyword"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <button type="submit" >Search</button>
+          </fieldset>
+        </fieldset>
+      </form>
+      <button (click)="setWork('create')">Create</button>
+    </div>
+  </div>
+  <!-- Event Grid -->
+  <div class="row" [hidden]="work === 'create' || work === 'none'">
+    <div class="column">
+      <event-app-card class="content"
+        *ngFor="let event of events"
+        [event]="event"
+      ></event-app-card>
+    </div>
+    <!-- END GRID -->
+  </div>
+
+  <div id="removing" [hidden]="work === 'show' || work === 'none'">
+    <div class="uploadedimage">
+      <img [src]="eventForm.value.image" height="250px" width="250px" />
+    </div>
+    <div class="formcontent">
+      <form
+        [formGroup]="eventForm"
+        (ngSubmit)="submitForm()"
+        class="uploadform"
+      >
+        <fieldset [disabled]="isSubmitting">
+          <fieldset class="bar">
+            <input
+              type="file"
+              placeholder="URL of profile picture"
+              (change)="upload($event)"
+              accept=".png,.jpg"
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <input
+              type="text"
+              placeholder="name"
+              formControlName="name"
+              required
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <input
+              type="text"
+              placeholder="topic"
+              formControlName="topic"
+              required
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <input
+              type="text"
+              placeholder="description"
+              formControlName="description"
+              required
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <input
+              type="datetime-local"
+              placeholder="description"
+              formControlName="date"
+              required
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <input
+              type="time"
+              placeholder="description"
+              formControlName="time"
+              required
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <input
+              type="text"
+              placeholder="link"
+              formControlName="link"
+              required
+            />
+          </fieldset>
+          <fieldset class="bar">
+            <button class="btn btn-lg btn-primary" type="submit">Create</button>
+          </fieldset>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div></div>
+  <div>
+    <!--Event Creation
+    <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
+      <fieldset [disabled]="isSubmitting">
+        <fieldset class="form-group">
+          <input
+            class="form-control"
+            type="file"
+            placeholder="URL of profile picture"
+            (change)="upload($event)"
+            accept=".png,.jpg"
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="URL of profile picture"
+            formControlName="image"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="UserId"
+            formControlName="id"
+            readonly
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Username"
+            formControlName="name"
+            required
+          />
+        </fieldset>
+
+        <fieldset
+          class="form-group"
+          [disabled]="user.type !== 'Employee Admin'"
+        >
+          <select
+            name="employeeType"
+            class="form-control"
+            formControlName="type"
+          >
+            <option value="Software Developer">Software Developer</option>
+            <option value="Manager">Manager</option>
+            <option value="Inventory Admin">Inventory Admin</option>
+            <option value="Employee Admin">Employee Admin</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input
+            *ngIf="settingsForm.value.type === 'Software Developer'"
+            class="form-control"
+            type="text"
+            placeholder="Manager Id"
+            formControlName="managerId"
+            required disabled
+          />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input
+            class="form-control"
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input
+            class="form-control"
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <button
+            class="btn btn-lg btn-primary pull-xs-right"
+            type="submit"
+          >
+            Update
+          </button>
+        </fieldset>
+      </fieldset>
+    </form>
+-->
+  </div>
+</div>
+</div>

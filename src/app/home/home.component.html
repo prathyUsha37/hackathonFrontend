@@ -1,0 +1,284 @@
+<body>
+  <div class="container-fluid p-0 m-0">
+    <div
+      class="container-fluid header w-100"
+      style="height: 8%; font-size: 16px; font-weight: 500"
+    >
+      <div class="container justify-content-between float-right">
+        <div class="p-3">
+          <a [routerLink]="['/home']" style="color: white">Home</a>
+        </div>
+        <div class="p-3">
+          <a [routerLink]="['/event']" style="color: white">Events</a>
+        </div>
+        <div class="p-3">
+          <a [routerLink]="['/chat']" style="color: white">ChatRoom</a>
+        </div>
+        <div class="p-3">
+          <a [routerLink]="['/photography']" style="color: white">Gallery</a>
+        </div>
+        <div class="p-3  "><a [routerLink]="['/login']" style="color: white;">Loguot</a></div>
+      </div>
+    </div>
+    <div
+      class="container-fluid d-flex justify-content-center"
+      style="height: 75%"
+      id="carouselbackground"
+    >
+      <div
+        id="carouselExampleControls"
+        class="carousel slide w-100 h-100 p-4"
+        data-ride="carousel"
+        data-interval="2000"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleControls"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+          <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img
+              class="d-flex justify-content-center w-129 h-170"
+              src=" ./../assets/login1.jpeg"
+              alt="First slide"
+              style="object-fit: contain"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Collegare</h1>
+              <p>Missing the light chattering sound of your colleagues,  hangouts, and all the fun along with work? 
+                 <br>
+                Well, no more! 
+                <br>
+                To help you stay connected and have fun with your colleagues, we've brought to you Collegare!</p>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img
+              class="d-flex justify-content-center w-100 h-100"
+              src="https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="First slide"
+              style="object-fit: contain"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <p>Best Pic</p>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img
+              class="d-flex justify-content-center w-100 h-100"
+              src="https://images.pexels.com/photos/3774057/pexels-photo-3774057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="First slide"
+              style="object-fit: contain"
+              widht="500px"
+            />
+
+            <div class="carousel-caption d-none d-md-block">
+            
+              <p>Let's get started</p>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="row bg-white" style="height: 650px">
+      <div class="container1 d-flex justify-content-center">
+        <div class="card">
+          <div class="content">
+            <h2 class="card-heading pl-3">Events</h2>
+            <p class="card-content pt-2">
+              A platform where you can participate in the events hosted by your
+              colleagues and also create your own events. Get creative with how
+              you create exciting events to make it fun and connect better.
+              Events don’t need to be anything big. They can be as simple as
+              everyone reading the same article and sharing their thoughts or
+              participating in a weekly meditation as a group.
+            </p>
+          </div>
+          <img
+            src="https://github.com/ArjunP98/Hackathon/blob/main/photo-1505569127510-bde1536937bc.jpg?raw=true"
+            width="35%"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row bg-white" style="height: 650px">
+      <div class="container1 d-flex justify-content-center">
+        <div class="card">
+          <div class="content">
+            <h2 class="card-heading pl-3">Gallery</h2>
+            <p class="card-content pt-2">
+              Sharing photos with your team is a good way to strengthen the bond
+              and make it feel like you’re all together. Photos of your pets,
+              your work-from-home station, your garden, or what you’re cooking
+              are all good ways to create the personal touch lost through
+              working from home. If you prefer to not share personal
+              information, your favorite meme or an interesting article works
+              too.
+            </p>
+          </div>
+          <img
+            src="https://github.com/ArjunP98/Hackathon/blob/main/pexels-photo-2372977.jpeg?raw=true"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-white" style="height: 650px">
+      <div class="container1 d-flex justify-content-center">
+        <div class="card">
+          <div class="content">
+            <h2 class="card-heading pl-3">ChatRoom</h2>
+            <p class="card-content pt-2">
+              A platform where you can start a discussion on the topics you want
+              to discuss with your colleagues and gain insights. The topic can
+              be anything - a movie you watched recently, some new technology,
+              the current affairs, or any other.
+            </p>
+          </div>
+          <img
+            src="https://github.com/ArjunP98/Hackathon/blob/main/pexels-photo-3807769.jpeg?raw=true"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row bg-white" style="height: 250px">
+      <div
+        class="aboutuscontainer w-100 h-100 d-flex justify-content-center"
+        style="color: blanchedalmond; height: 250px; font-size: 12px"
+      >
+        <div class="p-2 d-flex justify-content-center h-50">
+          <div class="p-2 ml-5 d-flex-column">
+            <div class="p-2">
+              <a href="https://www.adp.in/" class="linksarehere">ADP</a>
+            </div>
+            <div class="p-2">
+              <a
+                href="https://www.adp.com/worldwide-locations.aspx"
+                class="linksarehere"
+                >WorldWide Locations</a
+              >
+            </div>
+            <div class="p-2">
+              Call:<a href="tel:18004204242" class="linksarehere"
+                >1800-420-4242</a
+              >
+            </div>
+          </div>
+
+          <div class="p-2 mr-5 d-flex-column">
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/our-solutions/small-business/"
+                class="linksarehere"
+                >Small Businesses</a
+              >
+            </div>
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/products/payroll-on-cloud/"
+                class="linksarehere"
+                >Payroll Software on Cloud</a
+              >
+            </div>
+          </div>
+          <div class="p-2 ml-5 d-flex-column">
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/our-solutions/midsized-business/"
+                class="linksarehere"
+                >Mid-Size Business</a
+              >
+            </div>
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/services/payroll-outsourcing/"
+                class="linksarehere"
+                >Payroll Services</a
+              >
+            </div>
+          </div>
+          <div class="p-2 ml-5 d-flex-column">
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/our-solutions/large-business/"
+                class="linksarehere"
+                >Large Business</a
+              >
+            </div>
+            <div class="p-2">
+              <a href="https://www.adp.in/about/" class="linksarehere"
+                >About ADP</a
+              >
+            </div>
+            <div class="p-2">
+              <a href="https://www.blog.adp.in/" class="linksarehere"
+                >Connect@ADP Blog</a
+              >
+            </div>
+            <div class="p-2">
+              <a
+                href="https://jobs.adp.com/locations/india/"
+                class="linksarehere"
+                >Careers</a
+              >
+            </div>
+            <div class="p-2">
+              <a href="https://tech.adp.com/" class="linksarehere"
+                >Tech Careers</a
+              >
+            </div>
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/resources/news-room/"
+                class="linksarehere"
+                >Press Releases</a
+              >
+            </div>
+
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/about/adp-covid-19-preparedness/"
+                class="linksarehere"
+                >ADP Covide-19 Awareness</a
+              >
+            </div>
+          </div>
+          <div class="p-2 ml-5 d-flex-column">
+            <div class="p-2">
+              <a
+                href="https://www.adp.in/our-solutions/multinational-business/"
+                class="linksarehere"
+                >Multi-National Companies</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

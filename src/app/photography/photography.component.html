@@ -1,0 +1,92 @@
+<div>
+  <div class="container-fluid header1 w-100 " style="height:8%; font-size:16px;font-weight:500;">
+    <div class="container   justify-content-between float-right ">
+        <div class="p-3  "><a [routerLink]="['/home']" style="color: white;">Home</a></div>
+        <div class="p-3 "><a [routerLink]="['/event']" style="color: white;">Events</a></div>
+        <div class="p-3  "><a [routerLink]="['/chat']" style="color: white;">ChatRoom</a></div>
+        <div class="p-3    "><a [routerLink]="['/photography']" style="color: white;">Gallery</a></div>
+        <div class="p-3  "><a [routerLink]="['/login']" style="color: white;">Loguot</a></div>
+    </div>
+  </div>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <button
+        type="button"
+        class="btn btn-link"
+        data-toggle="collapse"
+        data-target="#demo"
+      >
+        <img
+          src="https://www.flaticon.com/svg/static/icons/svg/685/685669.svg"
+          height="40px"
+          width="40px"
+        />
+      </button>
+      <div id="demo" class="collapse">
+        <div class="uploadedimage">
+          <img
+            [src]="photographyForm.value.image"
+            height="250px"
+            width="250px"
+          />
+        </div>
+        <div class="formcontent">
+          <form
+            [formGroup]="photographyForm"
+            (ngSubmit)="submitForm()"
+            class="uploadform"
+          >
+            <fieldset [disabled]="isSubmitting">
+              <fieldset class="bar">
+                <input
+                  type="file"
+                  placeholder="URL of profile picture"
+                  (change)="upload($event)"
+                  accept=".png,.jpg"
+                />
+              </fieldset>
+              <fieldset class="bar">
+                <input
+                  type="text"
+                  placeholder="caption"
+                  formControlName="caption"
+                  required
+                />
+              </fieldset>
+              <fieldset class="bar">
+                <button  type="submit">
+                  upload
+                </button>
+              </fieldset>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Photo Grid -->
+  <div class="rows">
+    <div class="columns" *ngFor="let i of [1, 2, 3, 4]; let k = index">
+      <div *ngFor="let photo of photos; let j = index">
+        <div class="containers" *ngIf="j % 4 === k">
+          <img [src]="photo.image" style="width: 100%" />
+          <div class="overlays">
+           <div class="sameline"> <span class="sender">{{photo.name }}</span
+            ><span class="heart-shape" (click)="increaseCount(j)" id="{{j}}"></span
+            ><span class="count" id="count{{j}}">{{
+              photo.count
+            }}</span> </div><span class="caption">{{
+              photo.caption
+            }}</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
